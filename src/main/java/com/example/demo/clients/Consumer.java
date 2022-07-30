@@ -20,7 +20,6 @@ public class Consumer{
     @JmsListener(destination = "${active-mq.consumerA}")
     public void onMessage(Employee message) {
         try{
-            //do additional processing
             log.info("Received Message: "+ message);
         } catch(Exception e) {
             log.error("Received Exception : "+ e);
